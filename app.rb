@@ -19,7 +19,7 @@ post("/process_umbrella") do
 
   @url_encoded_string = @user_location.gsub(" ", "+")
 
-  gmaps_url = "https://maps.googleapis.com/maps/api/geocode/json?address=#{@url_encoded_string}&key=AIzaSyDKz4Y3bvrTsWpPRNn9ab55OkmcwZxLOHI"
+  gmaps_url = "https://maps.googleapis.com/maps/api/geocode/json?address=#{@url_encoded_string}&key=GMAPS_KEY"
 
   @raw_response = HTTP.get(gmaps_url).to_s
 
